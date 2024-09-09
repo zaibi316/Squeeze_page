@@ -1,0 +1,38 @@
+.body {
+    margin:0%;
+    padding: 0%;
+
+}
+
+.EpsoHome {
+width: 1440px;
+height: 2561px;
+position: relative;
+background: white;
+}
+
+.group46{
+    width: 1440px;
+    height: 180px;
+    left: 0px; 
+    top: 3607px; 
+    position: absolute;
+
+}
+
+.Rectangle38{
+
+    width: 1440px; 
+    height: 180px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    background: #015668
+}
+.group45{
+    width: 1280px; 
+    height: 44.71px; 
+    left: 80px; 
+    top: 68px; 
+    position: absolute;
+}

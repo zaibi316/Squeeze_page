@@ -36,3 +36,109 @@ background: white;
     top: 68px; 
     position: absolute;
 }
+.Group25 {
+    width: 411px; 
+    height: 27px; 
+    left: 869px; 
+    top: 9px; 
+    position: absolute;
+}
+.AllRightsReserved{
+    left: 245px; 
+    top: 0px; 
+    position: absolute; 
+    color: white; 
+    font-size: 18px; 
+    font-family: Prompt; 
+    font-weight: 400; 
+    word-wrap: break-word;
+}
+.group24{
+    width: 235px; 
+    height: 27px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute;
+}
+.EpsoAi{
+    left: 124px; 
+    top: 0px; 
+    position: absolute;
+}
+.text-1 {
+    color: white;
+    font-size: 18px;
+    font-family: 'Prompt';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.text-2 {
+    color: white;
+    font-size: 18px;
+    font-family: 'Prompt';
+    font-weight: 500;
+    word-wrap: break-word;
+}
+.Copyright {
+    left: 0;
+    top: 0;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+.Vector {
+    width: 18px;
+    height: 18px;
+    left: 96px;
+    top: 4px;
+    position: absolute;
+    background: white;
+}
+.Ellipse7 {
+    width: 630px;
+    height: 160px;
+    left: 873px;
+    top: 342px;
+    position: absolute;
+    background: #0DE2EA;
+    box-shadow: 1200px 1200px 1200px;
+    border-radius: 9999px;
+    filter: blur(1200px);
+}
+.Frame1171275722 {
+    height: 355px;
+    left: 362px;
+    top: 200px;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+.TransformYourContentWithEpsoAi {
+    align-self: stretch;
+    text-align: center;
+}
+
+.text-normal {
+    color: #111111;
+    font-size: 56px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 500;
+    line-height: 76px;
+    word-wrap: break-word;
+}
+
+.text-highlight {
+    color: #015668;
+    font-size: 64px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 600;
+    line-height: 76px;
+    word-wrap: break-word;
+}

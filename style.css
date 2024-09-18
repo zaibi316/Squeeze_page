@@ -142,3 +142,44 @@ background: white;
     line-height: 76px;
     word-wrap: break-word;
 }
+.dummy-text {
+    width: 578px;
+    text-align: center;
+    color: #505050;
+    font-size: 20px;
+    font-family: Prompt, sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+.frame-container {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: inline-flex;
+}
+.custom-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background: #015668;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+.start-creating {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: Prompt, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+.ellipse {
+    width: 10px;
+    height: 10px;
+    background: #015668;
+    border-radius: 50%;
+}

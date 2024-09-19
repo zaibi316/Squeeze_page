@@ -183,3 +183,38 @@ background: white;
     background: #015668;
     border-radius: 50%;
 }
+.Frame1171275720 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 30px;
+    border: 1px solid #015668;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.Vector {
+    width: 26px;
+    height: 26px;
+    background: black;
+}
+.SeeDemo {
+    text-align: center;
+    color: #015668;
+    font-size: 18px;
+    font-family: Prompt, sans-serif; /* Added fallback font */
+    font-weight: 400;
+    word-wrap: break-word;
+}
+.Vector {
+    width: 215.11px;
+    height: 604px;
+    left: 439.59px;
+    top: 688px;
+    position: absolute;
+    transform: rotate(61.66deg);
+    transform-origin: 0 0;
+    background: #015668;
+}

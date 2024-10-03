@@ -1,7 +1,167 @@
-.body {
-    margin:0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.quote-btn .btn {
+    text-decoration: none;
+    background-color: #00A2B1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.quote-btn .btn:hover {
+    background-color: #008C99;
+}
+
+.content-transformation {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+
+h1 span {
+    color: #00A2B1;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin: 20px 0 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #00A2B1;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #008C99;
+}
+
+.btn-secondary {
+    border: 1px solid #00A2B1;
+    color: #00A2B1;
+}
+
+.btn-secondary:hover {
+    background-color: #00A2B1;
+    color: #ffffff;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #00A2B1;
+}
+
+.content-slider {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slider-item {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #00A2B1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slider-item:hover {
+    transform: scale(1.05);
+}
+
+.slider-item:hover .play-icon {
+    opacity: 1;
 }
 
 .EpsoHome {

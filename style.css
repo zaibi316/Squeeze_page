@@ -68,20 +68,113 @@ body {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     margin: 5px;
+    
 }
 
-.hero-images img {
-    max-width: 20%;
-    margin: 10px;
-    border-radius: 10px;
+.btn-secondary{
+    background-color: white;
+    color: #0090A3;
+    border-color: aqua;
 }
+
+.dot {
+    height: 6px;
+    width: 6px;
+    background-color: #0f5a62;
+    border-radius: 50%;
+    
+  }
+
+  .frame-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 80px;
+}
+
+.frame {
+  position: relative;
+  width: 150px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #00c7d8;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.frame.active {
+  width: 180px;
+  height: 240px;
+  z-index: 10;
+  transform: scale(1.1);
+}
+
+.frame-container .frame:not(.active) {
+  margin-left: -30px; /* Create the overlap by adjusting margin-left */
+}
+
+.frame:hover {
+  z-index: 15;
+  transform: scale(1.05);
+}
+  
+  .frame.active img {
+    border-radius: 15px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: 0 20px;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+  }
+  
+  .card i {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
 
 .what-you-get {
     text-align: center;
     padding: 50px;
-    background-color: #FFFFFF;
 }
 
 .features {

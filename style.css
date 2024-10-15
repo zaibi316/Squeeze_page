@@ -34,180 +34,438 @@ body {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
+}
+
+.quote-btn:hover{
+    background-color: #007a8c;
+    cursor: pointer;
 }
 
 .hero-section {
     text-align: center;
-    padding: 50px;
-    background-color: #E9F5F7;
-}
-
-.hero-section h1 {
-    font-size: 36px;
-    color: #2B2B2B;
-    margin-bottom: 20px;
-}
-.hero-section h2 {
-    font-size: 36px;
 }
 
 .highlight {
-    color: #0090A3; /* Choose the color you want for the specific word */
+    color: #0090A3;
+    font-weight: bold;
 }
 
-
-.hero-section p {
-    font-size: 18px;
-    color: #4B4B4B;
-    margin-bottom: 40px;
+/* Call-to-Action Buttons */
+/* Button Group */
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.cta-buttons .btn-primary, .btn-secondary {
+.btn {
     background-color: #0090A3;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 20px;
-    margin: 5px;
-    
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.btn-secondary{
+.btn:hover {
+    background-color: #007a8c;
+}
+
+.start-creating {
+    margin-right: 0;
+}
+
+.see-demo {
     background-color: white;
     color: #0090A3;
-    border-color: aqua;
+    border: 1px solid #0090A3;
+}
+
+.see-demo:hover {
+    background-color: #0090A3;
+    color: white;
 }
 
 .dot {
-    height: 6px;
-    width: 6px;
-    background-color: #0f5a62;
+    width: 10px;
+    height: 10px;
+    background-color: #0090A3;
     border-radius: 50%;
+    margin: 0 15px;
+}
+.parent-frame-container {
+    position: relative;
+}
+
+/* Zigzag-right element */
+.zigzag-right {
+    position: absolute;
+    right: 30px; /* Move to the right side */
+    top: 50%; /* Adjust based on where you want it vertically */
+    transform: translateY(-50%); /* Center it vertically */
     
-  }
-
-  .frame-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-top: 80px;
+    
 }
 
-.frame {
-  position: relative;
-  width: 150px;
-  height: 220px;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  z-index: 1;
-}
-
-.frame img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  color: #00c7d8;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 50%;
-}
-
-.frame.active {
-  width: 180px;
-  height: 240px;
-  z-index: 10;
-  transform: scale(1.1);
-}
-
-.frame-container .frame:not(.active) {
-  margin-left: -30px; /* Create the overlap by adjusting margin-left */
-}
-
-.frame:hover {
-  z-index: 15;
-  transform: scale(1.05);
-}
-  
-  .frame.active img {
-    border-radius: 15px;
-  }
-
-  .container {
+/* Frame Carousel */
+.frame-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  .card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 250px;
-    height: 250px;
-    margin: 0 20px;
-  }
-  
-  .card h3 {
-    margin-top: 0;
-  }
-  
-  .card i {
-    font-size: 48px;
-    color: #007bff;
-    margin-bottom: 10px;
-  }
-
-.what-you-get {
-    text-align: center;
-    padding: 50px;
-}
-
-.features {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
     margin-top: 30px;
 }
 
-.feature-box img {
-    max-width: 50px;
+.frame {
+    position: relative;
+    margin: 0 10px;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.why-choose-us {
-    padding: 50px;
-    text-align: center;
-    background-color: #E9F5F7;
+
+.frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.why-cards {
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 144, 163, 0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 144, 163, 1);
+}
+
+/* Active Frame */
+.frame.active {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+
+/* Frame Container */
+.frame-container {
+    display: flex;
+    justify-content: center; /* Align frames in the center */
+    align-items: flex-end; /* Align frames at the bottom */
+    gap: 0; /* Negative gap to attach frames together */
+}
+
+/* Frame Styles */
+.frame {
+    position: relative;
+    margin: 0; /* Adjust margin for better alignment */
+    transition: transform 0.3s ease;
+}
+
+.frame img {
+    width: 100%; /* Ensure the image fits the frame */
+    height: 100%; /* Ensure the image fits the frame */
+    object-fit: cover; /* Maintain image aspect ratio */
+}
+
+.frame.active {
+    z-index: 2; /* Bring the active frame in front */
+    transform: scale(1.1); /* Slightly enlarge active frame */
+}
+
+/* Specific Heights for Frames */
+.frame:nth-child(1) {
+    height: 180px; /* Smallest frame */
+    width: 120px;
+}
+
+.frame:nth-child(2) {
+    height: 200px; /* Slightly larger */
+    width: 140px;
+}
+
+.frame:nth-child(3) {
+    height: 240px; /* Largest, center frame */
+    width: 160px;
+}
+
+.frame:nth-child(4) {
+    height: 200px; /* Similar to the left frames */
+    width: 140px;
+}
+
+.frame:nth-child(5) {
+    height: 300px; /* Same as frame 1 */
+    width: 140px;
+}
+
+/* Play Button */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Zigzag Effect */
+.zigzag {
+    position: absolute;
+    bottom: -15px;
+}
+
+.what-you-get-section {
+    text-align: center;
+    margin-top: 100px;
+    background-color: #0DE2EA0F;
+}
+
+.what-you-get-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+}
+
+.subtext {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0 30px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.box {
+    background-color: white;
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.icon {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.box-container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #006c79;
+    border-radius: 0 0 10px 0;
+}
+
+.box-container .box:nth-child(2)::before {
+    left: auto;
+    right: 0;
+    border-radius: 0 0 0 10px;
+}
+.why-choose-us {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    position: relative;
+}
+
+.why-choose-us h2 span {
+    color: #007ea7;
+}
+
+.why-choose-us p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 20px;
-    margin-top: 40px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .card {
-    width: 30%;
-    background-color: white;
-    padding: 20px;
+    background-color: #004e64;
+    color: #fff;
     border-radius: 10px;
-    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: relative;
 }
+
+/* Flexbox layout for the first card */
+.card.first-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 400px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    width: 60%;
+}
+
+.card img {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+/* Adjusted spacing for better alignment */
+.card h3 {
+    margin-bottom: 20px;
+    padding-top: 20px; /* Adjust top padding as needed */
+}
+
+.card p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #d3e2e8;
+    
+}
+
+/* Styling the Read More link without a box */
+.card a {
+    color: #00f0ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Adjusting the position of the tag to be on top of the heading */
+.tag {
+    background-color: #00f0ff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #004e64;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+/* Adding dual-colored circles to the top-left of each card */
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00f0ff; /* Outer light color */
+}
+
+.inner-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #004e64; /* Inner dark color */
+}
+
+/* Adjust other cards below */
+.card:not(.first-card) img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card.first-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .tag {
+        right: 10px;
+    }
+}
+
 
 .cta-section {
     text-align: center;
@@ -215,25 +473,69 @@ body {
     background-color: #FFFFFF;
 }
 
+
 .cta-button {
-    background-color: #0090A3;
+    background-color: #005f7a;
     color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px 20px;
     border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    width: auto; /* Adjust width for responsiveness */
+    margin-top: 20px;
+}
+
+/* Hover effect */
+.cta-button:hover {
+    background-color: #005f7a;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+    .cta-button {
+        width: 100%;  /* Full width on mobile */
+        font-size: 1.1rem;  /* Slightly larger text for better readability */
+        padding: 15px 20px; /* Increase padding for larger touch area */
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .cta-button {
+        font-size: 1.2rem;  /* Larger text size for smaller screens */
+        padding: 18px 20px; /* More padding for touch-friendly interface */
+    }
 }
 
 footer {
     background-color: #0090A3;
     color: white;
-    text-align: center;
     padding: 20px;
+}
+
+/* Flexbox layout for logo and text */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer img {
     max-width: 100px;
+    margin-right: auto; /* This ensures the logo stays on the left */
 }
 
 footer p {
-    margin-top: 10px;
+    margin-top: 0;
+    margin-left: auto; /* Ensures the text stays on the right */
 }
+
+/* Bold styling for the name "Epso.ai" */
+footer p strong {
+    font-weight: bold;
+}
+

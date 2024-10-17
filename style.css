@@ -105,18 +105,23 @@ body {
 /* Zigzag-right element */
 .zigzag-right {
     position: absolute;
-    right: 30px; /* Move to the right side */
+    right: 0px; /* Move to the right side */
     top: 50%; /* Adjust based on where you want it vertically */
     transform: translateY(-50%); /* Center it vertically */
     
     
+    
 }
 
-/* Frame Carousel */
-.frame-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+/* Zigzag-left element */
+.zigzag-left {
+    position: absolute;
+    left: 0px; /* Move to the right side */
+    top: 50%; /* Adjust based on where you want it vertically */
+    transform: translateY(-50%); /* Center it vertically */
+    bottom: -15px;
+    
+    
 }
 
 .frame {
@@ -127,14 +132,9 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform-origin: center;
 }
 
-
-.frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .play-button {
     position: absolute;
@@ -171,13 +171,15 @@ body {
     justify-content: center; /* Align frames in the center */
     align-items: flex-end; /* Align frames at the bottom */
     gap: 0; /* Negative gap to attach frames together */
+    margin-top: 30px;
 }
 
 /* Frame Styles */
 .frame {
     position: relative;
     margin: 0; /* Adjust margin for better alignment */
-    transition: transform 0.3s ease;
+    transition: transform 0.9s ease;
+    
 }
 
 .frame img {
@@ -193,28 +195,41 @@ body {
 
 /* Specific Heights for Frames */
 .frame:nth-child(1) {
-    height: 180px; /* Smallest frame */
-    width: 120px;
+    height: 240px; /* Smallest frame */
+    width: 180px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-right: -10px;
 }
 
 .frame:nth-child(2) {
-    height: 200px; /* Slightly larger */
-    width: 140px;
+    height: 300px; /* Slightly larger */
+    width: 180px;
+    margin-top: 50px;
+    margin-bottom: -20px;
+
 }
 
 .frame:nth-child(3) {
-    height: 240px; /* Largest, center frame */
-    width: 160px;
+    height: 320px; /* Largest, center frame */
+    width: 180px;
+    margin-top: 50px;
+    margin-bottom: -20px;
 }
 
 .frame:nth-child(4) {
-    height: 200px; /* Similar to the left frames */
-    width: 140px;
+    height: 300px; /* Similar to the left frames */
+    width: 180px;
+    margin-top: 50px;
+    margin-bottom: -20px;
 }
 
 .frame:nth-child(5) {
-    height: 300px; /* Same as frame 1 */
-    width: 140px;
+    height: 240px; /* Same as frame 1 */
+    width: 180px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: -10px;
 }
 
 /* Play Button */
@@ -235,6 +250,15 @@ body {
     position: absolute;
     bottom: -15px;
 }
+.parent-box-container{
+    position: relative;
+}
+.vector-box{
+    position: absolute;
+    right: 470px; /* Move to the right side */
+    top: 12%; /* Adjust based on where you want it vertically */
+    transform: translateY(-50%); /* Center it vertically */
+}
 
 .what-you-get-section {
     text-align: center;
@@ -246,6 +270,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     color: #222;
+    
 }
 
 .subtext {
@@ -287,16 +312,42 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 5px;
+    height: 50px;
     background-color: #006c79;
-    border-radius: 0 0 10px 0;
+    border-radius: 50px;
+    padding: 10px 0 10px 0;
+}
+.box-container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px; /* Top line */
+    height: 5px; /* Thickness of the top line */
+    background-color: #006c79;
+    border-radius: 50px;
 }
 
 .box-container .box:nth-child(2)::before {
-    left: auto;
+    left: -5px;
     right: 0;
-    border-radius: 0 0 0 10px;
+    border-radius: 50px;
+}
+
+.box-container .box:nth-child(2)::after {
+    left: -5px;
+    right: 0;
+    border-radius: 50px;
+}
+.parent-card-container{
+    position: relative;
+}
+.Card{
+    position: absolute;
+    right: 420px; /* Move to the right side */
+    top: 7%; /* Adjust based on where you want it vertically */
+    transform: translateY(-50%); /* Center it vertically */
 }
 .why-choose-us {
     text-align: center;
@@ -305,10 +356,11 @@ body {
 }
 
 .why-choose-us h2 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     font-weight: bold;
     color: #1a1a1a;
     position: relative;
+    top: 20px;
 }
 
 .why-choose-us h2 span {
@@ -319,8 +371,17 @@ body {
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 30px;
-}
 
+}
+.parent-cta-container{
+    position: relative;
+}
+.Cta{
+    position: absolute;
+    right: 380px; /* Move to the right side */
+    top: 25%; /* Adjust based on where you want it vertically */
+    transform: translateY(-50%); /* Center it vertically */
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -372,12 +433,15 @@ body {
     margin-top: 10px;
     font-size: 1.6rem;
     position: relative;
+    display: flex;
+
 }
 
 /* Adjusted spacing for better alignment */
 .card h3 {
     margin-bottom: 20px;
     padding-top: 20px; /* Adjust top padding as needed */
+
 }
 
 .card p {
@@ -394,6 +458,7 @@ body {
     font-weight: bold;
     margin-top: 20px;
     align-self: flex-start;
+    
 }
 
 .card a:hover {
